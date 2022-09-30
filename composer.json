@@ -1,0 +1,15 @@
+{
+    "name": "youtube/crud",
+    "autoload": {
+        "psr-4": {
+            "Youtube\\Crud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gustavo Souza",
+            "email": "gustavosouzacco@gmail.com"
+        }
+    ],
+    "require": {}
+}
