@@ -5,11 +5,16 @@
             "Youtube\\Crud\\": "src/"
         }
     },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000"
+        ]
+    },
     "authors": [
         {
             "name": "Gustavo Souza",
             "email": "gustavosouzacco@gmail.com"
         }
-    ],
-    "require": {}
+    ]
 }

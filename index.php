@@ -1,5 +1,7 @@
 <?php
 
+use Youtube\Crud\Entities\Lead;
+
 require __DIR__ . "/vendor/autoload.php";
 
 // use Dotenv\Dotenv;
@@ -7,4 +9,7 @@ require __DIR__ . "/vendor/autoload.php";
 // $dotenv = Dotenv::createImmutable(__DIR__);
 // $dotenv->load();
 
-echo "Hello";
+$lead = new Lead("mudou@email.com");
+echo "<pre>";
+print_r($lead->deleteById(6));
+echo "</pre>";
