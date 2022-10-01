@@ -11,5 +11,5 @@ require __DIR__ . "/vendor/autoload.php";
 
 $lead = new Lead("mudou@email.com");
 echo "<pre>";
-print_r($lead->deleteById(6));
+print_r($lead->save());
 echo "</pre>";
