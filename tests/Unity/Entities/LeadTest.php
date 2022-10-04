@@ -37,16 +37,16 @@ class LeadTest extends TestCase
 
     public function testUpdateByIdShouldUpdateInDatabase()
     {
-        $emailExtect = "mudou@email.com";
+        $emailExpected = "mudou@email.com";
         $lead = new Lead("test@email.com");
         $leadRusultId = $lead->save();
 
-        $lead->setEmail($emailExtect);
+        $lead->setEmail($emailExpected);
         $leadRusultUpdate = $lead->updateById($leadRusultId);
 
         $leadResultFindById = $lead->findById($leadRusultId);
         $lead->deleteById($leadRusultId);
-        $this->assertEquals($emailExtect, $leadResultFindById['email']);
+        $this->assertEquals($emailExpected, $leadResultFindById['email']);
     }
 
     public function testDeleteByIdReturnTrueWhenAllOk()

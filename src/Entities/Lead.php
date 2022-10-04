@@ -3,10 +3,10 @@
 namespace Youtube\Crud\Entities;
 
 use PDO;
-use Youtube\Crud\Config\Model;
 use Youtube\Crud\Database\Database;
+use Youtube\Crud\Model\LeadModel;
 
-class Lead extends Model
+class Lead extends LeadModel
 {
     private $id;
     private $name;
@@ -19,43 +19,19 @@ class Lead extends Model
         $this->email = $email;
     }
 
+    public function save()
+    {
+        return $this->saveLead($this);
+    }
+
     public function findAll()
     {
-        try {
-            $conection = Database::getInstance();
-            $selectQuery = $conection->prepare("SELECT * FROM `lead`");
-
-            $resultInsert = $selectQuery->execute();
-            $fetchAll = $selectQuery->fetchAll(PDO::FETCH_ASSOC);
-            //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($fetchAll, true) . "\n", FILE_APPEND);
-            if ($selectQuery->rowCount() != 0) {
-                return $fetchAll;
-            } else {
-                return "Algo de errado não esta certo";
-            }
-        } catch (\Exception $error) {
-            echo $error->getMessage();
-        }
+        return $this->findAllLeads();
     }
 
     public function findById(int $id)
     {
-        try {
-            $conection = Database::getInstance();
-            $selectQuery = $conection->prepare("SELECT * FROM `lead` WHERE `id` = :id");
-            $selectQuery->bindValue(":id", $id);
-
-            $resultInsert = $selectQuery->execute();
-            $fetchAll = $selectQuery->fetchAll(PDO::FETCH_ASSOC);
-            //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($fetchAll, true) . "\n", FILE_APPEND);
-            if ($selectQuery->rowCount() != 0) {
-                return $fetchAll[0];
-            } else {
-                return false;
-            }
-        } catch (\Exception $error) {
-            echo $error->getMessage();
-        }
+        return $this->findByIdLead($id);
     }
 
     public function updateById(int $id)
