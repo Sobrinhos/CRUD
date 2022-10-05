@@ -1,6 +1,7 @@
 <?php
 
 use Youtube\Crud\Entities\Lead;
+use Youtube\Crud\View\Router;
 
 require __DIR__ . "/vendor/autoload.php";
 
@@ -9,7 +10,4 @@ require __DIR__ . "/vendor/autoload.php";
 // $dotenv = Dotenv::createImmutable(__DIR__);
 // $dotenv->load();
 
-$lead = new Lead("mudou@email.com");
-echo "<pre>";
-print_r($lead->save());
-echo "</pre>";
+$router = new Router();

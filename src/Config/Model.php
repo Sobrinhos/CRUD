@@ -110,7 +110,6 @@ class Model
             $conection = Database::getInstance();
 
             $stringFields = "";
-
             foreach ($fields as $field => $value) {
                 if (!is_null($value)) {
                     $value = ":" . $field . "";
