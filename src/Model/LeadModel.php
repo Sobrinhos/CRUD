@@ -31,4 +31,25 @@ class LeadModel extends Model
             return false;
         }
     }
+
+    protected function updateLeadById(Lead $lead, $id)
+    {
+        $arrayFields = array(
+            "name" => $lead->getName(),
+            "email" => $lead->getEmail()
+          );
+
+        $arrayWhere = array(
+            "id" => $id
+        );
+        return $this->update("lead", $arrayFields, $arrayWhere);
+    }
+
+    protected function deleteLeadById(int $id)
+    {
+        $arrayWhere = array(
+            "id" => $id
+        );
+        return $this->delete("lead", $arrayWhere);
+    }
 }

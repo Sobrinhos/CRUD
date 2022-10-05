@@ -103,4 +103,97 @@ class Model
             echo $error->getMessage();
         }
     }
+
+    public function update(string $table, array $fields, array $where)
+    {
+        try {
+            $conection = Database::getInstance();
+
+            $stringFields = "";
+
+            foreach ($fields as $field => $value) {
+                if (!is_null($value)) {
+                    $value = ":" . $field . "";
+
+                    if ($stringFields == "") {
+                        $stringFields = "`" . $field . "`=:" . $field;
+                    } else {
+                        $stringFields .= ", `" . $field . "=:" . $field;
+                    }
+                }
+            }
+
+            $stringWhere = "";
+            foreach ($where as $field => $value) {
+                if (!is_null($value)) {
+                    if ($stringWhere == "") {
+                        $stringWhere = "`" . $field . "` = :" . $field;
+                    } else {
+                        $stringWhere .= ", `" . $field . "` = :" . $field;
+                    }
+                }
+            }
+
+            $updateQuery = $conection->prepare(
+                "UPDATE `" . $table . "` SET " . $stringFields . " WHERE " . $stringWhere
+            );
+
+            foreach ($fields as $field => $value) {
+                if (!is_null($value)) {
+                    $updateQuery->bindValue(":" . $field, $value);
+                }
+            }
+
+            foreach ($where as $field => $value) {
+                if (!is_null($value)) {
+                    $updateQuery->bindValue(":" . $field, $value);
+                }
+            }
+
+            $resultInsert = $updateQuery->execute();
+            $fetchAll = $updateQuery->fetchAll(PDO::FETCH_ASSOC);
+            //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($fetchAll, true) . "\n", FILE_APPEND);
+            if ($updateQuery->rowCount() != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Exception $error) {
+            echo $error->getMessage();
+        }
+    }
+
+    public function delete(string $table, array $where)
+    {
+        try {
+            $conection = Database::getInstance();
+
+            $stringWhere = "";
+            foreach ($where as $field => $value) {
+                if (!is_null($value)) {
+                    if ($stringWhere == "") {
+                        $stringWhere = "`" . $field . "` = :" . $field;
+                    } else {
+                        $stringWhere .= ", `" . $field . "` = :" . $field;
+                    }
+                }
+            }
+            $deleteQuery = $conection->prepare("DELETE FROM `" . $table . "` WHERE " . $stringWhere);
+
+            foreach ($where as $field => $value) {
+                if (!is_null($value)) {
+                    $deleteQuery->bindValue(":" . $field, $value);
+                }
+            }
+
+            $resultInsert = $deleteQuery->execute();
+            if ($deleteQuery->rowCount() != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Exception $error) {
+            echo $error->getMessage();
+        }
+    }
 }
