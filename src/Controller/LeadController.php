@@ -26,6 +26,6 @@ class LeadController
             "message" => "Lead gravado com sucesso"
         );
 
-        return json_encode($result);
+        echo json_encode($result);
     }
 }
