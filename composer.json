@@ -8,7 +8,7 @@
     "scripts": {
         "start": [
             "Composer\\Config::disableProcessTimeout",
-            "php -S localhost:8000"
+            "php -S 127.0.0.1:8000"
         ],
         "test:watch": [
             "Composer\\Config::disableProcessTimeout",

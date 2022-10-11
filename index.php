@@ -1,9 +1,11 @@
 <?php
 
-use Youtube\Crud\Entities\Lead;
+use Youtube\Crud\Config\Utils;
 use Youtube\Crud\View\Router;
 
 require __DIR__ . "/vendor/autoload.php";
+
+Utils::CORS();
 
 // use Dotenv\Dotenv;
 
