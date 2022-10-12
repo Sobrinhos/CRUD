@@ -3,6 +3,7 @@
 namespace Youtube\Crud\Config;
 
 use PDO;
+use PDOStatement;
 use Youtube\Crud\Database\Database;
 
 class Model
@@ -12,35 +13,13 @@ class Model
         try {
             $conection = Database::getInstance();
 
-            $stringFields = "";
-            $stringValues = "";
-
-            foreach ($fields as $field => $value) {
-                if (!is_null($value)) {
-                    $value = ":" . $field . "";
-
-                    if ($stringFields == "") {
-                        $stringFields = "`" . $field . "`";
-                    } else {
-                        $stringFields .= ", `" . $field . "`";
-                    }
-
-                    if ($stringValues == "") {
-                        $stringValues = $value;
-                    } else {
-                        $stringValues .= ", " . $value;
-                    }
-                }
-            }
+            $stringFields = $this->getStringFields($fields);
+            $stringValues = $this->getStringValues($fields);
 
             $insertQuery = $conection->prepare("INSERT INTO `" . $table . "` (" . $stringFields
             . ") VALUES (" . $stringValues . ");");
 
-            foreach ($fields as $field => $value) {
-                if (!is_null($value)) {
-                    $insertQuery->bindValue(":" . $field, $value);
-                }
-            }
+            $this->bindValues($fields, $insertQuery);
 
             $insertQuery->execute();
             //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($conection, true) . "\n", FILE_APPEND);
@@ -75,24 +54,17 @@ class Model
         try {
             $conection = Database::getInstance();
 
-            $stringWhere = "";
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    if ($stringWhere == "") {
-                        $stringWhere = "`" . $field . "` = :" . $field;
-                    } else {
-                        $stringWhere .= ", `" . $field . "` = :" . $field;
-                    }
-                }
-            }
+            $stringWhere = $this->getStringWhere($where);
 
             $selectQuery = $conection->prepare("SELECT * FROM `" . $table . "` WHERE " . $stringWhere);
 
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    $selectQuery->bindValue(":" . $field, $value);
-                }
-            }
+            // foreach ($where as $field => $value) {
+            //     if (!is_null($value)) {
+            //         $selectQuery->bindValue(":" . $field, $value);
+            //     }
+            // }
+
+            $this->bindValues($where, $selectQuery);
 
             $resultInsert = $selectQuery->execute();
             $fetchAll = $selectQuery->fetchAll(PDO::FETCH_ASSOC);
@@ -109,45 +81,15 @@ class Model
         try {
             $conection = Database::getInstance();
 
-            $stringFields = "";
-            foreach ($fields as $field => $value) {
-                if (!is_null($value)) {
-                    $value = ":" . $field . "";
+            $stringFields = $this->getStringFieldsUpdate($fields);
 
-                    if ($stringFields == "") {
-                        $stringFields = "`" . $field . "`=:" . $field;
-                    } else {
-                        $stringFields .= ", `" . $field . "=:" . $field;
-                    }
-                }
-            }
-
-            $stringWhere = "";
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    if ($stringWhere == "") {
-                        $stringWhere = "`" . $field . "` = :" . $field;
-                    } else {
-                        $stringWhere .= ", `" . $field . "` = :" . $field;
-                    }
-                }
-            }
+            $stringWhere = $this->getStringWhere($where);
 
             $updateQuery = $conection->prepare(
                 "UPDATE `" . $table . "` SET " . $stringFields . " WHERE " . $stringWhere
             );
 
-            foreach ($fields as $field => $value) {
-                if (!is_null($value)) {
-                    $updateQuery->bindValue(":" . $field, $value);
-                }
-            }
-
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    $updateQuery->bindValue(":" . $field, $value);
-                }
-            }
+            $this->bindValues(array_merge($fields, $where), $updateQuery);
 
             $resultInsert = $updateQuery->execute();
             $fetchAll = $updateQuery->fetchAll(PDO::FETCH_ASSOC);
@@ -167,23 +109,15 @@ class Model
         try {
             $conection = Database::getInstance();
 
-            $stringWhere = "";
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    if ($stringWhere == "") {
-                        $stringWhere = "`" . $field . "` = :" . $field;
-                    } else {
-                        $stringWhere .= ", `" . $field . "` = :" . $field;
-                    }
-                }
-            }
+            $stringWhere = $this->getStringWhere($where);
             $deleteQuery = $conection->prepare("DELETE FROM `" . $table . "` WHERE " . $stringWhere);
 
-            foreach ($where as $field => $value) {
-                if (!is_null($value)) {
-                    $deleteQuery->bindValue(":" . $field, $value);
-                }
-            }
+            $this->bindValues($where, $deleteQuery);
+            // foreach ($where as $field => $value) {
+            //     if (!is_null($value)) {
+            //         $deleteQuery->bindValue(":" . $field, $value);
+            //     }
+            // }
 
             $resultInsert = $deleteQuery->execute();
             if ($deleteQuery->rowCount() != 0) {
@@ -193,6 +127,81 @@ class Model
             }
         } catch (\Exception $error) {
             echo $error->getMessage();
+        }
+    }
+
+    private function getStringFields(array $fields)
+    {
+        $result = "";
+        foreach ($fields as $field => $value) {
+            if (!is_null($value)) {
+                $value = ":" . $field . "";
+
+                if ($result == "") {
+                    $result = "`" . $field . "`";
+                } else {
+                    $result .= ", `" . $field . "`";
+                }
+            }
+        }
+        return $result;
+    }
+
+    private function getStringValues(array $fields)
+    {
+        $result = "";
+        foreach ($fields as $field => $value) {
+            if (!is_null($value)) {
+                $value = ":" . $field . "";
+
+                if ($result == "") {
+                    $result = $value;
+                } else {
+                    $result .= ", " . $value;
+                }
+            }
+        }
+        return $result;
+    }
+
+    private function getStringFieldsUpdate(array $fields)
+    {
+        $result = "";
+        foreach ($fields as $field => $value) {
+            if (!is_null($value)) {
+                $value = ":" . $field . "";
+
+                if ($result == "") {
+                    $result = "`" . $field . "`=:" . $field;
+                } else {
+                    $result .= ", `" . $field . "=:" . $field;
+                }
+            }
+        }
+        return $result;
+    }
+
+    private function getStringWhere(array $where)
+    {
+        $result = "";
+        foreach ($where as $field => $value) {
+            if (!is_null($value)) {
+                if ($result == "") {
+                    $result = "`" . $field . "` = :" . $field;
+                } else {
+                    $result .= ", `" . $field . "` = :" . $field;
+                }
+            }
+        }
+            return $result;
+    }
+
+    private function bindValues(array $bindValues, PDOStatement $statement)
+    {
+        foreach ($bindValues as $field => $value) {
+            if (!is_null($value)) {
+                $statement->bindValue(":" . $field, $value);
+            }
         }
     }
 }

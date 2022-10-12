@@ -2,8 +2,6 @@
 
 namespace Youtube\Crud\Entities;
 
-use PDO;
-use Youtube\Crud\Database\Database;
 use Youtube\Crud\Model\LeadModel;
 
 class Lead extends LeadModel
