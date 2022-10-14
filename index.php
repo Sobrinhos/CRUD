@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+// error_reporting(0);
+
 use Youtube\Crud\Config\Utils;
 use Youtube\Crud\View\Router;
 

@@ -2,6 +2,7 @@
 
 namespace Youtube\Crud\Entities;
 
+use Exception;
 use Youtube\Crud\Model\LeadModel;
 
 class Lead extends LeadModel
@@ -14,7 +15,11 @@ class Lead extends LeadModel
 
     public function __construct(string $email)
     {
-        $this->email = $email;
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->email = $email;
+        } else {
+            throw new Exception("Email não informado", 1);
+        }
     }
 
     public function save()
