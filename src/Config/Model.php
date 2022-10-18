@@ -40,7 +40,7 @@ class Model
     {
         try {
             $conection = Database::getInstance();
-            $selectQuery = $conection->prepare("SELECT * FROM " . $table);
+            $selectQuery = $conection->prepare("SELECT * FROM `" . $table . "`");
 
             $resultInsert = $selectQuery->execute();
             $fetchAll = $selectQuery->fetchAll(PDO::FETCH_ASSOC);
