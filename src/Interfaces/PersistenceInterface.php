@@ -4,7 +4,7 @@ namespace Youtube\Crud\Interfaces;
 
 use SebastianBergmann\Type\ObjectType;
 
-interface PercistenceInterface
+interface PersistenceInterface
 {
     public function save($object): int;
     public function findAll();

@@ -3,7 +3,7 @@
 namespace Youtube\Crud\Entities;
 
 use Exception;
-use Youtube\Crud\Interfaces\PercistenceInterface;
+use Youtube\Crud\Interfaces\PersistenceInterface;
 use Youtube\Crud\Percistence\LeadPercistence;
 
 class Lead
@@ -15,7 +15,7 @@ class Lead
     private $created_at;
     private $leadPercistence;
 
-    public function __construct(string $email, PercistenceInterface $leadPercistence)
+    public function __construct(string $email, PersistenceInterface $leadPercistence)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->email = $email;
