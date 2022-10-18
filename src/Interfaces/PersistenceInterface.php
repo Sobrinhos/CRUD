@@ -1,8 +1,8 @@
 <?php
 
-namespace Youtube\Crud\Interfaces;
+declare(strict_types=1);
 
-use SebastianBergmann\Type\ObjectType;
+namespace Youtube\Crud\Interfaces;
 
 interface PersistenceInterface
 {

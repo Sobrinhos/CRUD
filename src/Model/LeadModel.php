@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Youtube\Crud\Model;
 
 use Youtube\Crud\Config\Model;
-use Youtube\Crud\Entities\Lead;
 use Youtube\Crud\Interfaces\PersistenceInterface;
 
 class LeadModel extends Model implements PersistenceInterface

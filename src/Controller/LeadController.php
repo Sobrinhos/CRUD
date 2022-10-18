@@ -17,7 +17,7 @@ class LeadController
 
         try {
             if (!is_object($jsonDecoded) || !property_exists($jsonDecoded, 'email')) {
-                throw new Exception("Formato invalido ou a propriedade email não existe.", 1);
+                throw new Exception("Formato invalido ou a propriedade email não existe.", 406);
             }
             $leadModel = new LeadModel();
             $lead = new Lead($jsonDecoded->email, $leadModel);
@@ -36,14 +36,8 @@ class LeadController
             );
 
             echo json_encode($result);
-        } catch (Throwable $error) {
-            http_response_code(406);
-            $result =  array(
-                "success" => false,
-                "message" => $error->getMessage()
-            );
-
-            echo json_encode($result);
+        } catch (Exception $error) {
+            throw $error;
         }
     }
 }

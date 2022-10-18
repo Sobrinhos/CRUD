@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Youtube\Crud\Config;
 
+use Exception;
 use PDO;
 use PDOStatement;
 use Youtube\Crud\Database\Database;
@@ -24,12 +27,12 @@ class Model
             $insertQuery->execute();
             //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($conection, true) . "\n", FILE_APPEND);
             if ($conection->lastInsertId() != 0) {
-                return $conection->lastInsertId();
+                return (int) $conection->lastInsertId();
             } else {
-                return 0;
+                return (int) 0;
             }
-        } catch (\Exception $error) {
-            echo $error->getMessage();
+        } catch (Exception $error) {
+            throw $error;
         }
     }
 
@@ -45,7 +48,7 @@ class Model
 
             return $fetchAll;
         } catch (\Exception $error) {
-            echo $error->getMessage();
+            throw $error;
         }
     }
 
@@ -72,7 +75,7 @@ class Model
 
             return $fetchAll;
         } catch (\Exception $error) {
-            echo $error->getMessage();
+            throw $error;
         }
     }
 
@@ -100,7 +103,7 @@ class Model
                 return false;
             }
         } catch (\Exception $error) {
-            echo $error->getMessage();
+            throw $error;
         }
     }
 
@@ -126,7 +129,7 @@ class Model
                 return false;
             }
         } catch (\Exception $error) {
-            echo $error->getMessage();
+            throw $error;
         }
     }
 

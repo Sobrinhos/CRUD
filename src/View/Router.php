@@ -1,6 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Youtube\Crud\View;
+
+use Exception;
+use Youtube\Crud\Utils\ReturnErrorREST;
 
 class Router
 {
@@ -8,9 +13,13 @@ class Router
 
     public function __construct()
     {
-        $this->addNewRoute("subscribe", "POST", "lead");
-
-        $this->getRequestRoute();
+        try {
+            $this->addNewRoute("subscribe", "POST", "lead");
+            $this->getRequestRoute();
+        } catch (Exception $error) {
+            $returnError = new ReturnErrorREST($error);
+            $returnError->send();
+        }
     }
 
     private function addNewRoute($route, $method, $resouce)
