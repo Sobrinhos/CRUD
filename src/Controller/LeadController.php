@@ -5,6 +5,7 @@ namespace Youtube\Crud\Controller;
 use Exception;
 use Throwable;
 use Youtube\Crud\Entities\Lead;
+use Youtube\Crud\Model\LeadModel;
 
 class LeadController
 {
@@ -18,7 +19,8 @@ class LeadController
             if (!is_object($jsonDecoded) || !property_exists($jsonDecoded, 'email')) {
                 throw new Exception("Formato invalido ou a propriedade email não existe.", 1);
             }
-            $lead = new Lead($jsonDecoded->email);
+            $leadModel = new LeadModel();
+            $lead = new Lead($jsonDecoded->email, $leadModel);
             $id = $lead->save();
 
             if ($id > 0) {

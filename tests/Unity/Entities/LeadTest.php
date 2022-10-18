@@ -4,12 +4,14 @@ namespace Youtube\Crud\Tests\Entities\LeadTest;
 
 use PHPUnit\Framework\TestCase;
 use Youtube\Crud\Entities\Lead;
+use Youtube\Crud\Model\LeadModel;
 
 class LeadTest extends TestCase
 {
     public function testCreateNewLeadReturnInt()
     {
-        $lead = new Lead("mudou@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("mudou@email.com", $leadModel);
         $leadRusultId = $lead->save();
         $lead->deleteById($leadRusultId);
         $this->assertIsInt($leadRusultId, "Retorno recebido: " . $leadRusultId);
@@ -17,7 +19,8 @@ class LeadTest extends TestCase
 
     public function testFindAllLeadReturnArrayOfLeads()
     {
-        $lead = new Lead("mudou@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("mudou@email.com", $leadModel);
         $leadRusultId = $lead->save();
         $leadRusultArray = $lead->findAll();
         $lead->deleteById($leadRusultId);
@@ -26,7 +29,8 @@ class LeadTest extends TestCase
 
     public function testUpdateByIdReturnTrueWhenAllOk()
     {
-        $lead = new Lead("test@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("test@email.com", $leadModel);
         $leadRusultId = $lead->save();
 
         $lead->setEmail("mudou@email.com");
@@ -38,7 +42,8 @@ class LeadTest extends TestCase
     public function testUpdateByIdShouldUpdateInDatabase()
     {
         $emailExpected = "mudou@email.com";
-        $lead = new Lead("test@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("test@email.com", $leadModel);
         $leadRusultId = $lead->save();
 
         $lead->setEmail($emailExpected);
@@ -51,7 +56,8 @@ class LeadTest extends TestCase
 
     public function testDeleteByIdReturnTrueWhenAllOk()
     {
-        $lead = new Lead("test@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("test@email.com", $leadModel);
         $leadRusultId = $lead->save();
 
         $this->assertTrue($lead->deleteById($leadRusultId));
@@ -59,7 +65,8 @@ class LeadTest extends TestCase
 
     public function testFindByIdReturnFalseWhenLeadAsDeleted()
     {
-        $lead = new Lead("test@email.com");
+        $leadModel = new LeadModel();
+        $lead = new Lead("test@email.com", $leadModel);
         $leadRusultId = $lead->save();
 
         $this->assertTrue($lead->deleteById($leadRusultId));

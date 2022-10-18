@@ -4,10 +4,11 @@ namespace Youtube\Crud\Model;
 
 use Youtube\Crud\Config\Model;
 use Youtube\Crud\Entities\Lead;
+use Youtube\Crud\Interfaces\PercistenceInterface;
 
-class LeadModel extends Model
+class LeadModel extends Model implements PercistenceInterface
 {
-    protected function saveLead(Lead $lead): int
+    public function save($lead): int
     {
         $arrayFields = array(
           "id" => null,
@@ -17,12 +18,12 @@ class LeadModel extends Model
         return $this->insert("lead", $arrayFields);
     }
 
-    protected function findAllLeads()
+    public function findAll()
     {
         return $this->selectAll("lead");
     }
 
-    protected function findByIdLead(int $id)
+    public function findById(int $id)
     {
         $result = $this->selectWithWhere("lead", array("id" => $id));
         if ($result != false) {
@@ -32,7 +33,7 @@ class LeadModel extends Model
         }
     }
 
-    protected function updateLeadById(Lead $lead, $id)
+    public function updateById($lead, $id)
     {
         $arrayFields = array(
             "name" => $lead->getName(),
@@ -45,7 +46,7 @@ class LeadModel extends Model
         return $this->update("lead", $arrayFields, $arrayWhere);
     }
 
-    protected function deleteLeadById(int $id)
+    public function deleteById(int $id)
     {
         $arrayWhere = array(
             "id" => $id
