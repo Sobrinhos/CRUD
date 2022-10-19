@@ -21,6 +21,17 @@ class User
         $this->userPercistence = $UserPercistence;
     }
 
+    public function save(): int
+    {
+        return $this->userPercistence->save($this);
+    }
+
+    public function findById(int $id): User
+    {
+        $userFind = $this->userPercistence->findById($id);
+        return $userFind;
+    }
+
     public function getUsername(): string
     {
         return $this->username;
@@ -29,5 +40,10 @@ class User
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getPassword()
+    {
+        return $this->password;
     }
 }

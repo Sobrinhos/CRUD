@@ -25,3 +25,260 @@ SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de des
 
 SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
 
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
+PDOStatement Object
+(
+    [queryString] => UPDATE `lead` SET `name` =:name, `email` =:email WHERE `id` = :id
+)
+
