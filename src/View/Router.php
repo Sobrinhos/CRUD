@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Youtube\Crud\View;
 
 use Exception;
+use PDOException;
 use Youtube\Crud\Utils\ReturnErrorREST;
 
 class Router
@@ -17,6 +18,11 @@ class Router
             $this->addNewRoute("subscribe", "POST", "lead");
             $this->getRequestRoute();
         } catch (Exception $error) {
+            file_put_contents("E:/Projetos/youtube/CRUD/debug.txt", print_r($error, true) . "\n", FILE_APPEND);
+            $returnError = new ReturnErrorREST($error);
+            $returnError->send();
+        } catch (PDOException $error) {
+            file_put_contents("E:/Projetos/youtube/CRUD/debug_database.txt", print_r($error, true) . "\n", FILE_APPEND);
             $returnError = new ReturnErrorREST($error);
             $returnError->send();
         }

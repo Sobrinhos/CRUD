@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Youtube\Crud\Entities;
 
+use DateTime;
 use Exception;
 use Youtube\Crud\Interfaces\PersistenceInterface;
 
 class Lead
 {
-    private $id;
-    private $name;
-    private $email;
-    private $updated_at;
-    private $created_at;
-    private $leadPercistence;
+    private int $id;
+    private string $name = "";
+    private string $email;
+    private DateTime $updated_at;
+    private DateTime $created_at;
+    private PersistenceInterface $leadPercistence;
 
     public function __construct(string $email, PersistenceInterface $leadPercistence)
     {

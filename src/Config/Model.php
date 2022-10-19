@@ -25,7 +25,6 @@ class Model
             $this->bindValues($fields, $insertQuery);
 
             $insertQuery->execute();
-            //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($conection, true) . "\n", FILE_APPEND);
             if ($conection->lastInsertId() != 0) {
                 return (int) $conection->lastInsertId();
             } else {
@@ -61,12 +60,6 @@ class Model
 
             $selectQuery = $conection->prepare("SELECT * FROM `" . $table . "` WHERE " . $stringWhere);
 
-            // foreach ($where as $field => $value) {
-            //     if (!is_null($value)) {
-            //         $selectQuery->bindValue(":" . $field, $value);
-            //     }
-            // }
-
             $this->bindValues($where, $selectQuery);
 
             $resultInsert = $selectQuery->execute();
@@ -96,7 +89,7 @@ class Model
 
             $resultInsert = $updateQuery->execute();
             $fetchAll = $updateQuery->fetchAll(PDO::FETCH_ASSOC);
-            //file_put_contents("E:/Projetos/youtube/CRUD/debug1.txt", print_r($fetchAll, true) . "\n", FILE_APPEND);
+            file_put_contents("E:/Projetos/youtube/CRUD/debugDatabase.txt", print_r($updateQuery, true) . "\n", FILE_APPEND);
             if ($updateQuery->rowCount() != 0) {
                 return true;
             } else {
@@ -175,9 +168,9 @@ class Model
                 $value = ":" . $field . "";
 
                 if ($result == "") {
-                    $result = "`" . $field . "`=:" . $field;
+                    $result = "`" . $field . "` =:" . $field;
                 } else {
-                    $result .= ", `" . $field . "=:" . $field;
+                    $result .= ", `" . $field . "` =:" . $field;
                 }
             }
         }
