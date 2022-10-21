@@ -27,9 +27,21 @@ class UserModel extends Model implements PersistenceInterface
 
     public function findById(int $id): User
     {
-        $result = $this->selectWithWhere("user", array("id" => $id));
+        return $this->findOne(['id' => $id]);
+    }
+
+    public function find(?array $where)
+    {
+        # code...
+    }
+
+    public function findOne(array $where)
+    {
+        $result = $this->selectWithWhere("user", $where);
         if ($result != false) {
-            return new User($result[0]["username"], $result[0]["password"], $result[0]["name"], $this);
+            $newUser = new User($result[0]["username"], $result[0]["password"], $this);
+            $newUser->setName($result[0]["name"]);
+            return $newUser;
         } else {
             throw new Exception("Usuário não encontrado", 404);
         }
@@ -41,5 +53,9 @@ class UserModel extends Model implements PersistenceInterface
 
     public function deleteById(int $id)
     {
+        $arrayWhere = array(
+            "id" => $id
+        );
+        return $this->delete("user", $arrayWhere);
     }
 }

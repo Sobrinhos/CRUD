@@ -10,28 +10,42 @@ class UserTest extends TestCase
 {
     public function testWhenCreateNewUserShouldUsernameAndPassword()
     {
-        $userPercistence = new UserModel();
-        $user = new User("username", "password", "name", $userPercistence);
+        $userPersistence = new UserModel();
+        $user = new User("username", "password", $userPersistence);
 
         $this->assertIsString($user->getUsername());
     }
 
     public function testSaveShouldReturnNewInsertID()
     {
-        $userPercistence = new UserModel();
-        $user = new User("username", "password", "name", $userPercistence);
-
-        $this->assertIsInt($user->save());
+        $userPersistence = new UserModel();
+        $user = new User("username", "password", $userPersistence);
+        $userRusultId = $user->save();
+        $user->deleteById($userRusultId);
+        $this->assertIsInt($userRusultId);
     }
 
     public function testSaveIdShouldSaveInDatabase()
     {
-        $userPercistence = new UserModel();
-        $user = new User("username", "password", "name", $userPercistence);
+        $userPersistence = new UserModel();
+        $user = new User("username", "password", $userPersistence);
         $userRusultId = $user->save();
 
         $leadResultFindById = $user->findById($userRusultId);
-        // $user->deleteById($userRusultId);
+        $user->deleteById($userRusultId);
         $this->assertInstanceOf(User::class, $leadResultFindById);
+    }
+
+    public function testLoginReturnUserIntanceWhenUsernameAndPasswordIsOk()
+    {
+        $userPersistence = new UserModel();
+
+        $userCreate = new User("username", "password", $userPersistence);
+        $userRusultId = $userCreate->save();
+
+        $user = new User("username", "password", UserPersistence: $userPersistence);
+        $returnLogin = $user->login();
+        $user->deleteById($userRusultId);
+        $this->assertInstanceOf(User::class, $returnLogin);
     }
 }

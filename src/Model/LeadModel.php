@@ -34,6 +34,21 @@ class LeadModel extends Model implements PersistenceInterface
         }
     }
 
+    public function find(?array $where)
+    {
+        # code...
+    }
+
+    public function findOne(array $where)
+    {
+        $result = $this->selectWithWhere("lead", $where);
+        if ($result != false) {
+            return $result[0];
+        } else {
+            return false;
+        }
+    }
+
     public function updateById($lead, $id)
     {
         $arrayFields = array(
