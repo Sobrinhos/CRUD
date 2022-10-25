@@ -16,6 +16,7 @@ class Router
     {
         try {
             $this->addNewRoute("subscribe", "POST", "lead");
+            $this->addNewRoute("login", "POST", "user");
             $this->getRequestRoute();
         } catch (Exception $error) {
             file_put_contents("E:/Projetos/youtube/CRUD/debug.txt", print_r($error, true) . "\n", FILE_APPEND);
@@ -60,11 +61,11 @@ class Router
                         $newController->$method();
                         return true;
                     } else {
-                        echo "Não exite controller";
+                        throw new Exception("Não existe metodo", 404);
                     }
                     print_r($controller);
                 } else {
-                    echo "Não exite controller";
+                    throw new Exception("Não existe controller", 404);
                 }
 
                 // $controller           = $namespace . '\\' . ucfirst($route['resouce']) . 'Controller';
@@ -87,8 +88,7 @@ class Router
         }
 
         if ($notFound) {
-            http_response_code(404);
-            return;
+            throw new Exception("Não encontrado", 404);
         }
     }
 }
