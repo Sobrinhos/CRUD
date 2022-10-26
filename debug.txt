@@ -228,3 +228,1373 @@ Exception Object
     [previous:Exception:private] => 
 )
 
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => teste
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => teste
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => 
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+    [line:protected] => 91
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Formato invalido ou a propriedade email não existe.
+    [string:Exception:private] => 
+    [code:protected] => 406
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Controller\LeadController.php
+    [line:protected] => 20
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => subscribe
+                    [class] => Youtube\Crud\Controller\LeadController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Email não informado
+    [string:Exception:private] => 
+    [code:protected] => 406
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Entities\Lead.php
+    [line:protected] => 25
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\LeadController.php
+                    [line] => 23
+                    [function] => __construct
+                    [class] => Youtube\Crud\Entities\Lead
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => testeEmailInvalido
+                            [1] => Youtube\Crud\Model\LeadModel Object
+                                (
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => subscribe
+                    [class] => Youtube\Crud\Controller\LeadController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuario ou senha invalidos
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+    [line:protected] => 44
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuario ou senha invalidos
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+    [line:protected] => 44
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => dfgsdgsd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => tesfd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => tesfd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuário não encontrado
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Model\UserModel.php
+    [line:protected] => 46
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+                    [line] => 39
+                    [function] => findOne
+                    [class] => Youtube\Crud\Model\UserModel
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [username] => tesfd
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+
+Exception Object
+(
+    [message:protected] => Usuario ou senha invalidos
+    [string:Exception:private] => 
+    [code:protected] => 404
+    [file:protected] => E:\Projetos\youtube\CRUD\backend\src\Entities\User.php
+    [line:protected] => 44
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\Controller\UserController.php
+                    [line] => 23
+                    [function] => login
+                    [class] => Youtube\Crud\Entities\User
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 61
+                    [function] => login
+                    [class] => Youtube\Crud\Controller\UserController
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\src\View\Router.php
+                    [line] => 20
+                    [function] => getRequestRoute
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => E:\Projetos\youtube\CRUD\backend\index.php
+                    [line] => 19
+                    [function] => __construct
+                    [class] => Youtube\Crud\View\Router
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+

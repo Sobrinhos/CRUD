@@ -24,6 +24,9 @@ class UserTest extends TestCase
         $userRusultId = $user->save();
         $user->deleteById($userRusultId);
         $this->assertIsInt($userRusultId);
+
+        $user = new User("gustavo", "teste", $userPersistence);
+        $userRusultId = $user->save();
     }
 
     public function testSaveIdShouldSaveInDatabase()
