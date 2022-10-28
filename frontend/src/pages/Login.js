@@ -1,8 +1,13 @@
+import React from "react";
 import "./../styles/pages/Login.css"
 import { toast } from 'react-toast'
 import login from "../services/autenticate";
 
-export default function Login() {
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+  let navigate = useNavigate();
+
   const loginSubmit = async function (event) {
     event.preventDefault();
 
@@ -13,7 +18,9 @@ export default function Login() {
       toast.warn("Você precisa informar um usuário e senha!")
     }
 
-    await login(username, password);
+    if (await login(username, password)) {
+      navigate("/");
+    }
   }
 
   return (
@@ -26,3 +33,5 @@ export default function Login() {
     </form>
   );
 }
+
+export default Login;

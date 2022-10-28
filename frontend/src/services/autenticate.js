@@ -2,7 +2,7 @@ import "axios";
 import axios from "axios";
 import { toast } from "react-toast";
 
-export default async function login(username, password) {
+const login = async (username, password) => {
   const data = {
     username,
     password
@@ -16,9 +16,12 @@ export default async function login(username, password) {
     })
 
   if (returnLogin.success === true) {
-    toast.success(returnLogin.message)
+    toast.success(returnLogin.message);
+    return true;
   } else {
     toast.warn(returnLogin.message)
     return false;
   }
 }
+
+export default login;

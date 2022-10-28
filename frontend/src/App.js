@@ -1,11 +1,12 @@
-import Login from './pages/Login';
 import './styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toast'
+import Router from './Router';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Router />
       <ToastContainer position='bottom-center' delay={2000} />
     </div>
   );
