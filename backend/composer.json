@@ -26,6 +26,7 @@
         "spatie/phpunit-watcher": "^1.23"
     },
     "require": {
-        "firebase/php-jwt": "^6.3"
+        "firebase/php-jwt": "^6.3",
+        "phpstan/phpstan": "^1.9"
     }
 }
