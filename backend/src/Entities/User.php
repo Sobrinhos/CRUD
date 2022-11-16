@@ -34,26 +34,6 @@ class User
         return $userFind;
     }
 
-    public function login(): User
-    {
-        $userFind = $this->userPersistence->findOne(['username' => $this->username]);
-        $returnVerifyPassword = $this->verifyLogin($this->password, $userFind->getPassword());
-        if ($returnVerifyPassword) {
-            return $userFind;
-        } else {
-            throw new Exception("Usuario ou senha invalidos", 404);
-        }
-    }
-
-    private function verifyLogin($password, $hash): bool
-    {
-        if (password_verify($password, $hash)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public function deleteById(int $id)
     {
         return $this->userPersistence->deleteById($id);

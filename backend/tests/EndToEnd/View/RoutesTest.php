@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Youtube\Crud\Tests\Entities\RoutesTest;
 
 use PHPUnit\Framework\TestCase;

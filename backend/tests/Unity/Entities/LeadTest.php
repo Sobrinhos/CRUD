@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Youtube\Crud\Tests\Entities\LeadTest;
 
 use PHPUnit\Framework\TestCase;
